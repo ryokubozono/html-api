@@ -19,7 +19,7 @@ async function getIp() {
 
 
 getIp().then(ip => {
-  postData("http://localhost:8000/v1/refresh/", { time: new Date(), location: window.location.href, ip: ip })
+  postData("http://localhost:8000/v1/tracking/", { time: new Date(), location: window.location.href, ip: ip })
   .then(data => {
     console.log(data);
   });  
